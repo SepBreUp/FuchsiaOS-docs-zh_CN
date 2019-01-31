@@ -1,19 +1,24 @@
 <!--# Developing with Fuchsia packages-->
-# 使用 Fuchsia 包进行开发
 
-Almost everything that exists on a Fuchsia system is a [Fuchsia package][pkg-struct].
+# 使用 Fuchsia 包开发
+
+<!--Almost everything that exists on a Fuchsia system is a [Fuchsia package][pkg-struct].
 Even the contents of /system are backed by a Fuchsia package. Whether it is
 immediately apparent or not almost everything you see on Fuchsia lives in a
 package. This document will cover the basics of a package-driven workflow where
 you [build][pkg-doc] a package and push it to a Fuchsia device which is reachable
-via IP from your development host.
+via IP from your development host.-->
 
-## Pre-requisites and overview
+在 Fuchsia 系统中，几乎所有的东西都是一个 [Fuchsia 包][pkg-struct]。即使 /system 的内容也是由 Fuchsia 包支持的。在 Fuchsia 中不管是否一目了然，几乎所有的东西都需要 Fuchsia 包支持。本文档将介绍包驱动工作流的基础知识，你可以[构建][pkg-doc]一个包并通过 IP 将其从开发主机推送到一个 Fuchsia 设备。
 
-The host and target must be able to communicate over IP. In particular
+<!--## Pre-requisites and overview-->
+## 预备知识和概述
+
+<!--The host and target must be able to communicate over IP. In particular
 it must be possible to SSH from the development host to the target device, and
 the target device must be able to connect via TCP to the development host on
-port 8083. The SSH connection is used to issue commands to the target device.
+port 8083. The SSH connection is used to issue commands to the target device.-->
+主机设备和目标设备必须可以通过 IP 通讯。尤其，主机设备必须能够通过 SSH 协议与目标设备通讯，目标设备必须能够通过 TCP 协议连接主机设备的 8083 端口。SSH 连接用于向目标设备发出命令。
 
 The development host will run a simple, static file, HTTP server which makes the
 updates available to the target. This HTTP server is part of the Fuchsia source
