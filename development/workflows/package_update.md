@@ -20,9 +20,9 @@ the target device must be able to connect via TCP to the development host on
 port 8083. The SSH connection is used to issue commands to the target device.-->
 主机设备和目标设备必须可以通过 IP 通讯。尤其，主机设备必须能够通过 SSH 协议与目标设备通讯，目标设备必须能够通过 TCP 协议连接主机设备的 8083 端口。SSH 连接用于向目标设备发出命令。
 
-The development host will run a simple, static file, HTTP server which makes the
+<!--The development host will run a simple, static file, HTTP server which makes the
 updates available to the target. This HTTP server is part of the Fuchsia source
-code and built automatically.
+code and built automatically.-->
 
 The target is instructed to look for changes on the development host via a
 couple of commands that are run manually. When the update system on the target
